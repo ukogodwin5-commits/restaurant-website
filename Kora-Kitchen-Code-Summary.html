@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kora Kitchen Code Summary</title>
+<style>
+  @page { size: A4; margin: 18mm 16mm; }
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, "Times New Roman", serif; color: #222; line-height: 1.45; font-size: 10.5pt; }
+  h1 { color: #e85d04; font-size: 28pt; margin: 0 0 4pt; }
+  h2 { color: #b94700; font-size: 17pt; border-bottom: 2px solid #f4a261; padding-bottom: 4pt; margin: 20pt 0 8pt; }
+  h3 { color: #333; font-size: 12.5pt; margin: 12pt 0 3pt; }
+  p { margin: 4pt 0 7pt; }
+  ul { margin: 3pt 0 8pt 18pt; padding: 0; }
+  li { margin: 2pt 0; }
+  .cover { border-bottom: 6px solid #e85d04; padding-bottom: 18pt; margin-bottom: 16pt; }
+  .subtitle { color: #666; font-size: 13pt; }
+  .tag { display: inline-block; background: #fff0e6; color: #b94700; padding: 3pt 7pt; margin: 3pt 4pt 3pt 0; border-radius: 3pt; font-family: Arial, sans-serif; font-size: 8.5pt; }
+  .note { background: #fff8eb; border-left: 4px solid #f59e0b; padding: 7pt 9pt; margin: 8pt 0; }
+  .code { font-family: Consolas, "Courier New", monospace; color: #444; font-size: 9pt; }
+  .page-break { page-break-before: always; }
+  table { width: 100%; border-collapse: collapse; margin: 6pt 0 10pt; font-size: 9.5pt; }
+  th, td { border: 1px solid #ddd; padding: 5pt; vertical-align: top; text-align: left; }
+  th { background: #fce5d6; color: #8d3500; }
+  .footer { color: #777; font-size: 8pt; margin-top: 18pt; border-top: 1px solid #ddd; padding-top: 5pt; }
+</style>
+</head>
+<body>
+  <section class="cover">
+    <h1>Kora Kitchen</h1>
+    <div class="subtitle">HTML, CSS, and JavaScript Code Summary</div>
+    <p>A plain-language guide to the restaurant website in <span class="code">index.html</span>, <span class="code">styles.css</span>, and <span class="code">script.js</span>.</p>
+    <span class="tag">Restaurant website</span><span class="tag">Responsive layout</span><span class="tag">Shopping cart</span><span class="tag">Interactive UI</span>
+  </section>
+
+  <h2>1. Project Overview</h2>
+  <p>Kora Kitchen is a single-page restaurant ordering website. The page combines a fixed navigation bar, a food-focused hero section, category cards, popular dish cards, a cart sidebar, an image gallery, restaurant information, newsletter signup, and a footer.</p>
+  <p>The three files work together like this:</p>
+  <table><tr><th>File</th><th>Responsibility</th></tr>
+    <tr><td><span class="code">index.html</span></td><td>Defines the content, semantic sections, buttons, images, links, forms, and data attributes.</td></tr>
+    <tr><td><span class="code">styles.css</span></td><td>Controls layout, colors, typography, cards, spacing, hover states, animation, and responsive breakpoints.</td></tr>
+    <tr><td><span class="code">script.js</span></td><td>Adds browser behavior after <span class="code">DOMContentLoaded</span>: menus, favorites, quantities, cart updates, search, newsletter validation, and scrolling.</td></tr>
+  </table>
+
+  <h2>2. HTML Summary</h2>
+  <h3>Document setup</h3>
+  <ul>
+    <li>Uses HTML5 with <span class="code">&lt;!DOCTYPE html&gt;</span> and <span class="code">lang="en"</span>.</li>
+    <li>Includes responsive viewport metadata.</li>
+    <li>Loads Font Awesome from a CDN for navigation, food, cart, social, and utility icons.</li>
+    <li>Loads <span class="code">styles.css</span> for appearance and <span class="code">script.js</span> with <span class="code">defer</span> so JavaScript runs after the document is parsed.</li>
+  </ul>
+  <h3>Header and navigation</h3>
+  <p>The fixed <span class="code">header</span> contains the Kora Kitchen logo, links to Home, Menu, About, and Contact, a food search box, user icon, cart icon with a numeric badge, and a mobile menu button with the ID <span class="code">menuButton</span>.</p>
+  <h3>Hero section</h3>
+  <p>The Home section introduces the restaurant with the headline “Your Cravings, Our Kitchen!”, supporting copy, an Order Now anchor, a View Menu button, and three selling points: Fast Delivery, Best Quality, and 24/7 Support.</p>
+  <h3>Category section</h3>
+  <p>The Categories section contains six clickable category cards: Burgers, Pizza, Chicken, Drinks, Desserts, and Salads. Each card uses a <span class="code">data-category</span> value and an image.</p>
+  <h3>Popular dishes and cart</h3>
+  <p>The Menu section displays four dish cards: Cheese Burger, Chicken Pizza, Fried Chicken, and Creamy Pasta. Every card includes an image, favorite button, title, five-star rating, price, quantity control, and Add to Cart button.</p>
+  <p>The cart sidebar begins with three sample cart items. Each item has a name, price, quantity controls, and total. The sidebar also contains subtotal, delivery fee, total, and Checkout button.</p>
+  <h3>Supporting sections</h3>
+  <ul>
+    <li>A marquee message and animated meal image gallery.</li>
+    <li>An About Us section with restaurant image, description, and Learn More button.</li>
+    <li>A Why Choose Us grid with four feature cards.</li>
+    <li>A newsletter form with an email input and Subscribe button.</li>
+    <li>A footer with branding, social links, quick links, menu links, help links, contact details, and copyright text.</li>
+  </ul>
+
+  <div class="page-break"></div>
+  <h2>3. CSS Summary</h2>
+  <h3>Global foundation</h3>
+  <p>The universal selector resets padding and margin, applies <span class="code">box-sizing: border-box</span>, and uses Arial as the main font. The body uses a white background and dark text.</p>
+  <h3>Navigation styling</h3>
+  <p>The header is fixed at the top with a black background and high z-index. The navigation uses flexbox. Links are white and change to orange with an underline on hover. The cart badge is a red circular counter positioned over the cart icon.</p>
+  <p>At widths below 800px, the menu button appears, navigation links become a hidden vertical dropdown, and the search box becomes narrower.</p>
+  <h3>Hero and categories</h3>
+  <p>The hero uses a dark overlay gradient over <span class="code">images/hero-burger.jpeg</span>, cover sizing, large heading text, orange accent text, and flex alignment. Category cards use a six-column grid on large screens, three columns below 900px, and two columns on smaller screens. Hovering lifts cards and enlarges their images; the active category receives an orange border and pale orange background.</p>
+  <h3>Dish cards and quantity controls</h3>
+  <p>Popular dishes use a two-column grid and white cards with rounded corners, shadows, image cropping, rating colors, orange prices, and aligned card actions. The quantity control is a bordered flex row containing minus, quantity, and plus buttons. Add to Cart buttons use the orange brand color and darken on hover.</p>
+  <h3>Cart sidebar</h3>
+  <p>The sidebar is a white, shadowed panel that becomes sticky on larger screens. Cart rows use flex layout. Quantity buttons are small bordered controls. Summary rows align labels and values using flexbox. The checkout button spans the full sidebar width.</p>
+  <h3>Gallery, content sections, and footer</h3>
+  <p>The gallery has a dark marquee strip and a horizontally animated image row using the <span class="code">scrollImages</span> keyframes. About, feature, newsletter, and footer areas use consistent spacing, orange accents, dark backgrounds where appropriate, grid layouts, and hover states.</p>
+  <h3>Responsive behavior</h3>
+  <p>At 992px and below, the dish/cart layout becomes one column, feature cards become two columns, the footer becomes two columns, and the About section becomes one column. At 576px and below, dishes and feature cards become one column. Additional 600px and 400px breakpoints adjust category cards and navigation sizing.</p>
+
+  <div class="page-break"></div>
+  <h2>4. JavaScript Summary</h2>
+  <p>All behavior is placed inside a <span class="code">DOMContentLoaded</span> callback, which prevents the code from running before the HTML elements are available.</p>
+  <h3>Category selection</h3>
+  <p>Each <span class="code">.category-card</span> receives a click listener. Clicking one removes <span class="code">active</span> from all category cards, adds it to the clicked card, and logs its <span class="code">data-category</span> value.</p>
+  <h3>Mobile navigation</h3>
+  <p>The menu button toggles the <span class="code">open</span> class on navigation links and the <span class="code">active</span> class on the menu button. Clicking a navigation link closes the mobile menu.</p>
+  <h3>Favorites</h3>
+  <p>Heart buttons locate their dish card and read the dish name from its <span class="code">h3</span>. Favorite names are stored in <span class="code">localStorage</span> under <span class="code">favorites</span>. On page load, saved favorites restore their active state. Clicking a heart toggles the icon between regular and solid styles and adds or removes the dish name from storage.</p>
+  <h3>Dish-card quantities</h3>
+  <p>Each <span class="code">.qty-control</span> gets plus and minus listeners. Plus increases the displayed quantity. Minus decreases it but stops at 1. The Add to Cart handler reads this quantity when creating or updating a cart item.</p>
+  <h3>Add to Cart</h3>
+  <p>When Add to Cart is clicked, the script finds the card, extracts its name, price, and quantity, and searches the cart for an existing matching item. Existing items receive the added quantity. New items are created dynamically with name, price, quantity controls, and calculated total. The button temporarily changes to a green “Added” state.</p>
+  <h3>Cart quantities and totals</h3>
+  <p>The cart uses delegated click handling on <span class="code">.cart-sidebar</span>. This is important because newly added cart items do not exist when the page first loads. The handler identifies the clicked cart quantity button, changes its row quantity, and calls <span class="code">updateCartSummary()</span>.</p>
+  <p><span class="code">updateCartSummary()</span> recalculates every item total, subtotal, delivery fee, grand total, cart header count, and top navigation cart badge. Delivery is 1,500 when the cart has items and 0 when it is empty.</p>
+  <h3>Other interactions</h3>
+  <ul>
+    <li>Clicking the cart icon scrolls to the cart and briefly highlights it.</li>
+    <li>The trash icon removes all cart items and recalculates totals.</li>
+    <li>Checkout shows an empty-cart alert or a thank-you message with the total.</li>
+    <li>View Menu smoothly scrolls to the menu section.</li>
+    <li>Learn More inserts and removes additional About text.</li>
+    <li>The newsletter form validates an email value, shows a confirmation alert, and resets.</li>
+    <li>Search filters dish cards live as the user types and also works with Enter or the search button.</li>
+  </ul>
+
+  <h2>5. Current Implementation Notes</h2>
+  <div class="note"><strong>Working fix:</strong> Cart quantity controls use event delegation, so quantities on dynamically added dishes work correctly.</div>
+  <ul>
+    <li>The Font Awesome icons depend on an internet connection because they load from a CDN.</li>
+    <li>The category click handler currently selects and logs categories; it does not filter the dishes by category.</li>
+    <li>The cart starts with hard-coded sample items and does not persist cart data in localStorage.</li>
+    <li>The HTML contains a few minor cleanup opportunities, such as an empty <span class="code">id</span> attribute on the Order Now link and a list item used inside the title-line decoration.</li>
+    <li>The CSS references <span class="code">--dark-orange</span> without defining that variable, so the hero button hover may fall back to the browser’s inherited behavior.</li>
+  </ul>
+  <div class="footer">Prepared from the current Kora Kitchen project files on September 7, 2026.</div>
+</body>
+</html>

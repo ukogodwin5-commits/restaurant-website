@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KORA KITCHEN - DELICIOUS FOOD</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+     <script src="script.js" defer></script>
+
+    <!-- ========================= NAVEBAR ========================= -->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="" class="logo">
+                <i class="fa-solid fa-hat-wizard"></i>
+                <span>KORA <span>KITCHEN</span></span>
+           </a>
+
+         <ul class="nav-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#menu">Menu</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-action">
+
+                <!--Search-->
+                <div class="search-box">
+                    <input type="text" placeholder="Search food...">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+
+                <!--user-->
+                <div class="user-icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <!--cart-->
+                <div class="cart">
+                   <i class="fa-solid fa-cart-shopping"></i>
+                   <span class="cart-count">10</span>
+                </div>
+            </div>
+            
+            <!--mobile menu-->
+            
+            <button class="menu-button" id="menuButton">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!--============================ HERO  SECTION===============================-->
+
+    <main>
+
+        <section class="hero" id="home">
+
+           <div class="hero-content">
+
+                <p class="welcome">
+                    Welcome to KORA KITCHEN
+                </p>
+
+                <h1>
+                    Your Cravings,
+                     <br> 
+                      Our Kitchen!
+                </h1>
+
+                <p class="hero-text">
+                    Enjoy your favorite meals from the best<br>
+                     restaurant in town. Fresh, fast and tasty!
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#menu" class="btn" id>
+                        Order Now
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <button class="watch-button">
+                        <i class="fa-solid fa-play"></i>
+                        View Menu
+                    </button>
+                </div>
+
+                <div class="features">
+
+                    <div class="feature">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        
+                        <div>
+                            <strong>Fast Delivery</strong>
+                            <small>On time, every time</small>
+                        </div>
+                  </div>
+                
+                    <div class="feature">
+                         <i class="fa-solid fa-medal"></i>
+                        
+                        <div>
+                            <strong>Best Quality</strong>
+                            <small>Fresh ingredients</small>
+                        </div>
+                  </div>   
+             
+                    <div class="feature">
+                        <i class="fa-solid fa-headset"></i>
+                        
+                        <div>
+                            <strong>24/7 Support</strong>
+                            <small>We are here for you</small>
+                        </div>
+                   </div>
+               </div>
+           </div>
+        </section>
+
+        <!--============================ CATEGORIES  SECTION===============================-->
+
+        <section class="categories" id="categories">
+
+           <div class="section-title">
+               <h2>Categories</h2>
+               <div class="title-line">
+                  <span></span>
+                  <li>🍴</li>
+                  <span></span>
+               </div>
+           </div>
+
+
+          <div class="category-container">
+
+              <!-- Burger -->
+               <div class="category-card" data-category="burger">
+                   <div class="category-image">
+                      <img src="images/burger2.jpeg" alt="Burger">
+                   </div>
+
+                     <h3>Burgers</h3>
+
+                     <span class="category-line"></span>
+                </div>
+
+              <!-- Pizza -->
+               <div class="category-card" data-category="pizza">
+                   <div class="category-image">
+                      <img src="images/slide pizza.jpeg" alt="Pizza">
+                   </div>
+
+                     <h3>Pizza</h3>
+
+                     <span class="category-line"></span>
+                </div>
+
+           
+              <!-- Chicken -->
+               <div class="category-card" data-category="chicken">
+                   <div class="category-image">
+                      <img src="images/chicken.jpeg" alt="Chicken">
+                   </div>
+
+                     <h3>Chicken</h3>
+
+                     <span class="category-line"></span>
+                </div>
+
+                <!-- Drinks -->
+                <div class="category-card" data-category="drinks">
+                   <div class="category-image">
+                      <img src="images/drinks.jpeg" alt="Drinks">
+                   </div>
+
+                     <h3>Drinks</h3>
+
+                      <span class="category-line"></span> 
+              </div>
+                <!-- Desserts -->
+                <div class="category-card" data-category="desserts">
+                   <div class="category-image">
+                      <img src="images/desserts.jpeg" alt="Desserts">
+                   </div>
+
+                     <h3>Desserts</h3>
+
+                     <span class="category-line"></span>
+                </div>
+            
+                <!-- Salads -->
+                <div class="category-card" data-category="salads">
+                   <div class="category-image">
+                      <img src="images/salad.jpeg" alt="Salads">
+                   </div>
+
+                     <h3>Salads</h3>
+
+                     <span class="category-line"></span>
+              </div>   
+            </div>
+      </section>
+
+       <!-- ==================== POPULAR DISHES SECTION==================== -->
+
+        <section class="popular-section" id="menu">
+
+            <div class="container">
+
+               <h2 class="section-title">Popular Dishes</h2>
+
+               <div class="dishes-layout">
+
+                  <!-- Dishes Grid -->
+                  <div>
+                      <div class="dishes-grid">
+
+                           <!-- Dish 1 -->
+
+                            <div class="dish-card">
+
+                              <div class="dish-img">
+                                 <img src="images/burger2 (2).jpeg" alt="Cheese Burger">
+                                  <button class="heart-btn"><i class="fa-regular fa-heart"></i></button>
+                              </div>
+
+                              <div class="dish-info">
+                                   <h3>Cheese Burger</h3>
+
+                                  <div class="rating">
+                                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                     <span>(120)</span>
+                                  </div>
+
+                                  <div class="price">₦5,000</div>
+
+                                  <div class="card-actions">
+                                     <div class="qty-control">
+                                          <button class="minus">-</button>
+                                          <span class="qty">1</span>
+                                           <button class="plus">+</button>
+                                     </div>
+                                      <button class="add-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                                  </div>
+                              </div>
+                          </div>
+
+                             <!-- Dish 2 -->
+
+                          <div class="dish-card">
+
+                              <div class="dish-img">
+                                  <img src="images/chicken pizza.jpeg" alt="Chicken Pizza">
+                                  <button class="heart-btn"><i class="fa-regular fa-heart"></i></button>
+                              </div>
+
+                              <div class="dish-info">
+                                    <h3>Chicken Pizza</h3>
+                                  <div class="rating">
+                                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        <span>(95)</span>
+                                  </div>
+
+                                  <div class="price">₦7,000</div>
+                                  <div class="card-actions">
+                                      <div class="qty-control">
+                                          <button class="minus">-</button>
+                                          <span class="qty">1</span>
+                                          <button class="plus">+</button>
+                                      </div>
+                                        <button class="add-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                                  </div>
+                              </div>
+                          </div>
+
+                            <!-- Dish 3 -->
+
+                            <div class="dish-card">
+                                 
+                                <div class="dish-img">
+                                   <img src="images/fried-chicken.jpeg" alt="Fried Chicken">
+                                   <button class="heart-btn"><i class="fa-regular fa-heart"></i></button>
+                               </div>
+                              <div class="dish-info">
+                                    <h3>Fried Chicken</h3>
+                                    <div class="rating">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        <span>(80)</span>
+                                    </div>
+                                    <div class="price">₦6,500</div>
+                                    <div class="card-actions">
+                                      <div class="qty-control">
+                                          <button class="minus">-</button>
+                                          <span class="qty">1</span>
+                                          <button class="plus">+</button>
+                                        </div>
+                                        <button class="add-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                                    </div>
+                              </div>
+                          </div>
+
+                           <!-- Dish 4 -->
+
+                          <div class="dish-card">
+
+                              <div class="dish-img">
+                                  <img src="images/creamy paste.jpeg" alt="Creamy Pasta">
+                                   <button class="heart-btn"><i class="fa-regular fa-heart"></i></button>
+                              </div>
+                              <div class="dish-info">
+                                    <h3>Creamy Pasta</h3>
+                                    <div class="rating">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        <span>(60)</span>
+                                   </div>
+                                   <div class="price">₦6,000</div>
+                                   <div class="card-actions">
+                                      <div class="qty-control">
+                                            <button class="minus">-</button>
+                                            <span class="qty">1</span>
+                                            <button class="plus">+</button>
+                                       </div>
+                                        <button class="add-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                       <div class="view-all">
+                           <a href="#categories">View All Menu</a>
+                       </div>
+                  </div>
+
+                  <!-- Cart Sidebar -->
+
+                  <div class="cart-sidebar">
+
+                        <div class="cart-header">
+                           <span>Your Cart (3)</span>
+                           <i class="fa-solid fa-trash" style="cursor:pointer; color:#999;"></i>
+                       </div>
+
+                      <div class="cart-item">
+                            <img src="images/burger2 (2).jpeg" alt="Cheese Burger">
+                            <div class="cart-item-info">
+                                <h4>Cheese Burger</h4>
+                                <div class="item-price">₦5,000</div>
+                                <div class="cart-qty">
+                                    <button>-</button>
+                                    <span>2</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <div style="font-weight:600;">₦10,000</div>
+                      </div>
+
+                      <div class="cart-item">
+                            <img src="images/chicken pizza.jpeg" alt="Chicken Pizza">
+                            <div class="cart-item-info">
+                                <h4>Chicken Pizza</h4>
+                                <div class="item-price">₦7,000</div>
+                              <div class="cart-qty">
+                                    <button>-</button>
+                                    <span>1</span>
+                                   <button>+</button>
+                              </div>
+                          </div>
+                          <div style="font-weight:600;">₦7,000</div>
+                      </div>
+
+                       <div class="cart-item">
+                               <img src="images/coke.jpeg" alt="Coke">
+                            <div class="cart-item-info">
+                                  <h4>Coke</h4>
+                                  <div class="item-price">₦1,500</div>
+                                  <div class="cart-qty">
+                                      <button>-</button>
+                                      <span>1</span>
+                                      <button>+</button>
+                                 </div>
+                          </div>
+                          <div style="font-weight:600;">₦1,500</div>
+                      </div>
+
+                      <div class="cart-summary">
+
+                            <div class="summary-row">
+                               <span>Subtotal</span>
+                               <span>₦18,500</span>
+                          </div>
+                          <div class="summary-row">
+                               <span>Delivery Fee</span>
+                               <span>₦1,500</span>
+                          </div>
+                          <div class="summary-row total">
+                                 <span>Total</span>
+                                 <span>₦20,000</span>
+                          </div>
+                          <button class="checkout-btn">
+                          Checkout <i class="fa-solid fa-arrow-right"></i>
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+       </section>
+
+
+       
+       <!-- ==================== FOOD CATEGORIES SECTION==================== -->
+
+      <section class="food-categories">
+            <marquee class="marquee-text" direction="right">KORA KITCHEN DELIVERS ALL KIND OF DELICIOUS MEALS.ORDER NOW AND SATISFY YOUR TASTE BUDS</marquee>
+            <div class="marguee-food">
+                <div class="food-section">
+                  <img src="images/white rice.jpeg" class="gallary-meal">
+                  <img src="images/chicken(2).jpeg" class="gallary-meal">
+                  <img src="images/shawarma.jpeg" class="gallary-meal">
+                  <img src="images/fried rice and meat.jpeg" class="gallary-meal">
+                  <img src="images/grilled fish with pounded yam.jpeg"  class="gallary-meal">
+                  <img src="images/jollof rice and meat .jpeg" class="gallary-meal">
+                  <img src="images/jollof rice.jpeg" class="gallary-meal">
+                  <img src="images/pounded yam with fried chicken.jpeg" class="gallary-meal">
+                  <img src="images/roasted chicken and beans.jpeg" class="gallary-meal">
+                  <img src="images/smoky spiced fish and cooked plantain.jpeg" class="gallary-meal">
+                  <img src="images/white rice and beans.jpeg" class="gallary-meal">
+                  <img src="images/chicken(2).jpeg" class="gallary-meal">
+             </div>
+          </div>
+      </section>
+
+        <!-- ==================== ABOUT US ==================== -->
+
+        <section class="about-section" id="about">
+
+            <div class="container">
+
+                <div class="about-content">
+
+                    <div class="about-img">
+                        <img src="images/restaurant.jpeg" alt="Restaurant">
+                   </div>
+                    <div class="about-text">
+                        <h2>About Us</h2>
+                        <p>Welcome to Kora Kitchen
+                         At Kora Kitchen, we believe great food shouldn't make you wait.
+                         We prepare every meal with fresh ingredients, bold flavors, and careful attention so that what lands at your door tastes just as good as if you were sitting in our kitchen. From comforting classics to exciting new dishes, we deliver hot, tasty food right when you need it.<br>
+                         Why customers choose us:<br>
+                         &bull; Fresh ingredients, never compromise<br>
+                         &bull; Fast and reliable delivery — on time, every time<br>
+                         &bull; Quality you can taste in every bite<br>
+                         &bull; Friendly support available whenever you need us<br>
+                         Whether you're craving a quick lunch, a family dinner, or something special after a long day, Kora Kitchen is ready.
+                         Order now and taste the difference.</p>
+                        <button class="learn-btn">Learn More</button>
+                   </div>
+              </div>
+           </div>
+      </section>
+
+       <!-- ==================== WHY CHOOSE US ==================== -->
+
+      <section class="why-section">
+
+            <div class="container">
+                <h2 class="section-title">Why Choose Us</h2>
+
+              <div class="features-grid">
+
+                   <div class="feature-card">
+                       <i class="fa-solid fa-truck-fast"></i>
+                       <h3>Fast Delivery</h3>
+                       <p>Quick delivery to your doorstep</p>
+                  </div>
+
+                   <div class="feature-card">
+                       <i class="fa-solid fa-medal"></i>
+                       <h3>Best Quality</h3>
+                       <p>We use only the best ingredients</p>
+                   </div>
+
+                    <div class="feature-card">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h3>Safe & Hygienic</h3>
+                        <p>Your health is our top priority</p>
+                   </div>
+
+                    <div class="feature-card">
+                        <i class="fa-solid fa-face-smile"></i>
+                        <h3>Customer Satisfaction</h3>
+                        <p>We care about our customers</p>
+                    </div>
+              </div>
+          </div>
+     </section>
+
+       <!-- ==================== NEWSLETTER ==================== -->
+
+     <section class="newsletter">
+
+           <div class="container">
+
+               <div class="newsletter-content">
+
+                    <div class="newsletter-form">
+                         <h2>Get Exclusive Offers</h2>
+                        <p>Subscribe to get special offers and updates</p>
+                   </div>
+                   <form class="newsletter-form" id="newsletterForm">
+                       <input type="email" id="email" placeholder="Enter your email" required>
+                       <button type="submit">Subscribe</button>
+                  </form>
+              </div>
+          </div>
+      </section>
+
+        <!-- ==================== FOOTER ==================== -->
+
+        <footer id="contact">
+
+          <div class="container">
+
+              <div class="footer-grid">
+
+                 <div class="footer-brand">
+                       <h3><i class="fa-solid fa-utensils"></i> Kora<span>Kitchen</span></h3>
+                        <p>Delicious food delivered to your doorstep. Fresh, fast and tasty!</p>
+                        <div class="socials">
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                       </div>
+                 </div>
+
+                 <div class="footer-col">
+                      <h4>Quick Links</h4>
+                        <ul>
+                           <li><a href="#">Home</a></li>
+                           <li><a href="#">Menu</a></li>
+                           <li><a href="#">About Us</a></li>
+                           <li><a href="#">Contact</a></li>
+                      </ul>
+                 </div>
+
+                 <div class="footer-col">
+                       <h4>Menu</h4>
+                      <ul>
+                          <li><a href="#">Burgers</a></li>
+                          <li><a href="#">Pizza</a></li>
+                          <li><a href="#">Chicken</a></li>
+                          <li><a href="#">Drinks</a></li>
+                          <li><a href="#">Desserts</a></li>
+                      </ul>
+                 </div>
+
+                 <div class="footer-col">
+                        <h4>Help</h4>
+                      <ul>
+                         <li><a href="#">FAQs</a></li>
+                         <li><a href="#">Delivery Information</a></li>
+                         <li><a href="#">Terms & Conditions</a></li>
+                         <li><a href="#">Privacy Policy</a></li>
+                      </ul>
+                 </div>
+
+                 <div class="footer-col contact-info">
+                        <h4>Contact Us</h4>
+                        <p><i class="fa-solid fa-phone"></i> +234 8144956326</p>
+                        <p><i class="fa-solid fa-envelope"></i> info@korakitchen.com</p>
+                        <p><i class="fa-solid fa-location-dot"></i> 123 KoraKitchen Street, Lagos, Nigeria.</p>
+                 </div>
+                 <div class="copyright">
+                      © 2024 KoraKitchen. All Rights Reserved.
+                 </div>
+              </div> 
+          </div>
+      </footer>
+  </main>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
