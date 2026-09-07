@@ -140,9 +140,9 @@ body{
     line-height: 1;
 }
 
-/* MODILE MENU */
+/* ================= MOBILE MENU ================= */
 
-.menu-button{
+.menu-button {
     display: none;
     color: #fff;
     font-size: 24px;
@@ -162,8 +162,119 @@ body{
 @media (max-width: 800px) {
     .menu-button {
         display: block;
-    margin-left: 14px;
-    flex-shrink: 0;
+        margin-left: 10px;
+        flex-shrink: 0;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 75px;
+        left: 5%;
+        right: 5%;
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        z-index: 999;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .nav-action {
+        gap: 12px;
+        margin-left: auto;
+    }
+
+    .search-box {
+        width: 140px;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 400px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-action {
+        gap: 8px;
+    }
+
+    .search-box {
+        width: 100px;
+        padding: 0 10px;
+    }
+
+    .menu-button {
+        margin-left: 6px;
+        font-size: 22px;
+    }
+}
+
+/* MODILE MENU
+
+.menu-button{
+    display: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+.nav-links.open {
+    display: flex;
+}
+
+.menu-button.active {
+    color: #f59e0b;
+} */
+
+@media (max-width: 800px) {
+    .menu-button {
+        display: block;
+        margin-left: 8px;
+        flex-shrink: 0;
+    }
+
+    .nav-action {
+        gap: 12px;
+        margin-left: auto;   /* pushes everything to the right */
+    }
+
+    .search-box {
+        width: 130px;
+    }
+}
+
+
+/* @media (max-width: 700px) {
+  .navbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    column-gap: 10px;
+  }
+
+  .logo {
+    min-width: 0;
+  }
+
+    .menu-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-self: center;
+      width: 32px;
+      height: 32px;
+      padding: 0;
+      margin-left: 0;
+      flex-shrink: 0;
     }
 
     .nav-links {
@@ -186,13 +297,13 @@ body{
     }
 
     .nav-action {
-        gap: 10px;
+        gap: 7px;
     }
 
     .search-box {
         width: 160px;
     }
-}
+} */
 
 /* ============================= HERO SECTION ============================ */
 
@@ -489,14 +600,15 @@ body{
 
 /* Phones */
 
-@media (max-width: 620px) {
+@media (max-width: 670px) {
+ 
 
     .categories {
         padding: 30px 15px;
     }
 
     .search-box{
-      width: 130px;
+      width: 125px;
       font-size: 10px;
     }
 
@@ -533,7 +645,7 @@ body{
   }
 
   .menu-button {
-    margin-left: 18px;
+    margin-left: 0;
   }
 
     .category-container {
