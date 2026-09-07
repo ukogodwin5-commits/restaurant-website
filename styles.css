@@ -162,6 +162,8 @@ body{
 @media (max-width: 800px) {
     .menu-button {
         display: block;
+    margin-left: 14px;
+    flex-shrink: 0;
     }
 
     .nav-links {
@@ -211,7 +213,7 @@ body{
 
 .welcome{
     color:  hsl(39, 100%, 50%);;
-    font-size: 30px;
+    font-size: 25px;
     margin-bottom: 20px;
     font-style: italic;
 }
@@ -487,7 +489,7 @@ body{
 
 /* Phones */
 
-@media (max-width: 600px) {
+@media (max-width: 620px) {
 
     .categories {
         padding: 30px 15px;
@@ -516,6 +518,23 @@ body{
 /* Small phones */
 
 @media (max-width: 400px) {
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .nav-action {
+    gap: 6px;
+  }
+
+  .search-box {
+    width: 90px;
+    padding: 0 10px;
+  }
+
+  .menu-button {
+    margin-left: 18px;
+  }
 
     .category-container {
         grid-template-columns: 1fr 1fr;
