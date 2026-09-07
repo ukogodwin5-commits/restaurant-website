@@ -98,6 +98,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const itemName = card.querySelector("h3")?.textContent.trim() || "Dish";
     const qtyEl = card.querySelector(".qty");
     const qty = Number(qtyEl?.textContent) || 1;
+    const image = card.querySelector(".dish-img img");
+    const imageSource = image?.getAttribute("src") || "";
+    const imageAlt = image?.getAttribute("alt") || itemName;
 
     // Try different possible price selectors
     let priceText = card.querySelector(".price")?.textContent || 
@@ -132,16 +135,17 @@ document.addEventListener("DOMContentLoaded", () => {
       const cartItem = document.createElement("div");
       cartItem.className = "cart-item";
       cartItem.innerHTML = `
-        <div class="item-info">
+        <img src="${imageSource}" alt="${imageAlt}">
+        <div class="cart-item-info">
           <h4 class="item-name">${itemName}</h4>
           <p class="item-price">₦${price.toLocaleString()}</p>
+          <div class="cart-qty">
+            <button class="minus">-</button>
+            <span>${qty}</span>
+            <button class="plus">+</button>
+          </div>
         </div>
-        <div class="cart-qty">
-          <button class="minus">-</button>
-          <span>${qty}</span>
-          <button class="plus">+</button>
-        </div>
-        <div class="item-total">₦${(price * qty).toLocaleString()}</div>
+        <div class="item-total" style="font-weight:600;">₦${(price * qty).toLocaleString()}</div>
       `;
 
       // Try to append to .cart-items, otherwise directly to sidebar
@@ -312,7 +316,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
 
 
 

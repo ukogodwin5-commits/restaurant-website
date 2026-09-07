@@ -198,7 +198,7 @@ body{
 
 .hero{
     min-height:720px;
-    padding: 150px 6% 80px;
+    padding: 150px 6% 100px;
     display: flex;
     align-items: center;
     background: linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)), url(images/hero-burger.jpeg);
@@ -1129,6 +1129,36 @@ body{
       }
       .features-grid {
         grid-template-columns: 1fr;
+      }
+
+      .cart-item {
+        display: grid;
+        grid-template-columns: 48px minmax(0, 1fr) auto;
+        align-items: start;
+        gap: 8px;
+      }
+
+      .cart-item img {
+        width: 48px;
+        height: 48px;
+      }
+
+      .cart-item-info {
+        min-width: 0;
+      }
+
+      .cart-item-info h4 {
+        overflow-wrap: anywhere;
+      }
+
+      .cart-qty {
+        gap: 6px;
+      }
+
+      .item-total {
+        font-size: 13px;
+        text-align: right;
+        white-space: nowrap;
       }
     }
 
