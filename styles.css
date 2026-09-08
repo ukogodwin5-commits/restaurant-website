@@ -5,10 +5,15 @@
        box-sizing: border-box; 
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body{
     font-family:Arial ;
     background: #fff;
     color: #222;
+  overflow-x: hidden;
 
 }
 
@@ -197,6 +202,7 @@ body{
 }
 
 /* Extra small phones */
+
 @media (max-width: 400px) {
     .logo {
         font-size: 20px;
@@ -217,93 +223,6 @@ body{
     }
 }
 
-/* MODILE MENU
-
-.menu-button{
-    display: none;
-    color: #fff;
-    font-size: 24px;
-    cursor: pointer;
-    background: transparent;
-    border: none;
-}
-
-.nav-links.open {
-    display: flex;
-}
-
-.menu-button.active {
-    color: #f59e0b;
-} */
-
-@media (max-width: 800px) {
-    .menu-button {
-        display: block;
-        margin-left: 8px;
-        flex-shrink: 0;
-    }
-
-    .nav-action {
-        gap: 12px;
-        margin-left: auto;   /* pushes everything to the right */
-    }
-
-    .search-box {
-        width: 130px;
-    }
-}
-
-
-/* @media (max-width: 700px) {
-  .navbar {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto auto;
-    column-gap: 10px;
-  }
-
-  .logo {
-    min-width: 0;
-  }
-
-    .menu-button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      align-self: center;
-      width: 32px;
-      height: 32px;
-      padding: 0;
-      margin-left: 0;
-      flex-shrink: 0;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 75px;
-        left: 5%;
-        right: 5%;
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        background: rgba(0, 0, 0, 0.95);
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-    }
-
-    .nav-links a {
-        display: block;
-        padding: 8px 0;
-    }
-
-    .nav-action {
-        gap: 7px;
-    }
-
-    .search-box {
-        width: 160px;
-    }
-} */
 
 /* ============================= HERO SECTION ============================ */
 
@@ -474,7 +393,7 @@ body{
 
     gap: 14px;
 
-    max-width: 1200px;
+    max-width: 1200px; 
 
     margin: 0 auto;
 }
@@ -837,6 +756,7 @@ body{
     }
 
     /* ========== CART SIDEBAR ========== */
+    
     .cart-sidebar {
       background: white;
       border-radius: 12px;
@@ -845,6 +765,7 @@ body{
       height: fit-content;
       position: sticky;
       top: 20px;
+      cursor: pointer;
     }
 
     .cart-sidebar.highlight {
@@ -1138,11 +1059,13 @@ body{
 
     /* ========== FOOTER ========== */
 
-    footer {
-      background: #111;
-      color: #ccc;
+    footer{
       padding: 50px 0 20px;
+      color: #fff;
+      background: #000;
     }
+      
+    
 
     .footer-grid {
       display: grid;
@@ -1271,6 +1194,62 @@ body{
         font-size: 13px;
         text-align: right;
         white-space: nowrap;
+      }
+    }
+
+    /* Keep the phone header and hero aligned after all responsive rules. */
+    @media (max-width: 800px) {
+      .navbar {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto auto;
+        column-gap: 10px;
+      }
+
+      .logo {
+        min-width: 0;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      .nav-action {
+        gap: 8px;
+        margin-left: 0;
+      }
+
+      .menu-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        margin-left: 0;
+      }
+
+      .hero {
+        padding-top: 225px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .logo {
+        font-size: 18px;
+      }
+
+      .nav-action {
+        gap: 6px;
+      }
+
+      .search-box {
+        width: 68px;
+        padding: 0 8px;
+      }
+
+      .menu-button {
+        width: 30px;
+        height: 30px;
+        font-size: 22px;
       }
     }
 
