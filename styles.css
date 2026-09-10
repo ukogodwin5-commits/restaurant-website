@@ -1611,6 +1611,81 @@ body{
             }
         }
 
+      /* =========================
+         MENU, ABOUT AND CONTACT RESPONSIVE OVERRIDES
+      ========================= */
+
+      @media (max-width: 800px) {
+        .navbar {
+          width: 100%;
+          padding: 0 15px;
+        }
+
+        .search-box {
+          width: 145px;
+        }
+
+        .menu-page,
+        .about-page,
+        .contact-page {
+          width: 100%;
+          overflow: hidden;
+        }
+      }
+
+      @media (max-width: 800px) {
+        .about-page .story-grid,
+        .contact-page .contact-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .about-page .story-grid {
+          gap: 28px;
+        }
+
+        .about-page .story-image img {
+          height: 360px;
+        }
+
+        .contact-page .contact-grid {
+          gap: 20px;
+        }
+
+        .contact-page .form-row {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .navbar {
+          padding: 0 10px;
+          column-gap: 6px;
+        }
+
+        .logo {
+          font-size: 18px;
+        }
+
+        .nav-action {
+          gap: 6px;
+        }
+
+        .search-box {
+          width: 90px;
+          padding: 0 8px;
+        }
+
+        .menu-page {
+          padding-top: 100px;
+        }
+
+        .about-page,
+        .contact-page {
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+      }
+
 
 
 
