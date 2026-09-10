@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KORA KITCHEN - DELICIOUS MEALS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+     <script src="script.js" defer></script>
+
+    <!-- ========================= NAVEBAR ========================= -->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-hat-wizard"></i>
+                <span>KORA <span>KITCHEN</span></span>
+           </a>
+
+         <ul class="nav-links">
+              <li><a href="index.html#home">Home</a></li>
+              <li><a href="menu.html#menu">Menu</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-action">
+
+                <!--Search-->
+                <div class="search-box">
+                    <input type="text" placeholder="Search food...">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+
+                <!--user-->
+                <div class="user-icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <!--cart-->
+                <div class="cart">
+                   <i class="fa-solid fa-cart-shopping"></i>
+                   <span class="cart-count">10</span>
+                </div>
+            </div>
+
+              <!--mobile menu-->
+
+            <button class="menu-button" id="menuButton">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="categories" id="categories">
+            <div class="section-title">
+                <h1>Explore Our Menu</h1>
+                <div class="title-line"><span></span><i class="fa-solid fa-utensils"></i><span></span></div>
+            </div>
+
+            <div class="category-container">
+                <div class="category-card active" data-category="Chicken pizza">
+                    <div class="category-image"><img src="images/chicken pizza.jpeg" alt="chicken pizza"></div>
+                    <h3>Chicken Pizza</h3><span class="category-line"></span>
+                </div>
+                <div class="category-card" data-category="creamy paste">
+                    <div class="category-image"><img src="images/creamy paste.jpeg" alt="creamy paste"></div>
+                    <h3>Creamy Paste</h3><span class="category-line"></span>
+                </div>
+                <div class="category-card" data-category="chicken">
+                    <div class="category-image"><img src="images/chicken.jpeg" alt="Chicken"></div>
+                    <h3>Chicken</h3><span class="category-line"></span>
+                </div>
+                <div class="category-card" data-category="drinks">
+                    <div class="category-image"><img src="images/drinks.jpeg" alt="Drinks"></div>
+                    <h3>Drinks</h3><span class="category-line"></span>
+                </div>
+                <div class="category-card" data-category="roasted chicken and beans ">
+                    <div class="category-image"><img src="images/roasted chicken and beans.jpeg" alt="roasted chicken and beans "></div>
+                    <h3>Chicken and Beans</h3><span class="category-line"></span>
+                    
+                </div>
+                <div class="category-card" data-category="salads">
+                    <div class="category-image"><img src="images/salad.jpeg" alt="Salads"></div>
+                    <h3>Salads</h3><span class="category-line"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="popular-section" id="menu">
+            <div class="container">
+                <h2 class="section-title">Your Favorite Dishes</h2>
+                <div class="dishes-layout">
+                    <div>
+                        <div class="dishes-grid">
+
+                            <article class="dish-card">
+                                <div class="dish-img">
+                                    <img src="images/smoky spiced fish and cooked plantain.jpeg" alt="Smoky Spiced Fish and Cooked Plantain">
+                                    <button class="heart-btn" type="button" aria-label="Favorite Smoky Spiced Fish and Cooked Plantain"><i class="fa-regular fa-heart"></i></button>
+                                </div>
+                                <div class="dish-info">
+                                    <h3>Smoky Spiced Fish and Cooked Plantain</h3>
+                                    <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(120)</span></div>
+                                    <div class="price">₦9,000</div>
+                                    <div class="card-actions"><div class="qty-control"><button class="minus" type="button">-</button><span class="qty">1</span><button class="plus" type="button">+</button></div><button class="add-btn" type="button"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button></div>
+                                </div>
+                            </article>
+                            <article class="dish-card">
+                                <div class="dish-img">
+                                    <img src="images/white rice.jpeg" alt="White Rice">
+                                    <button class="heart-btn" type="button" aria-label="Favorite White Rice"><i class="fa-regular fa-heart"></i></button>
+                                </div>
+                                <div class="dish-info">
+                                    <h3>White Rice</h3>
+                                    <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(95)</span></div>
+                                    <div class="price">₦15,000</div>
+                                    <div class="card-actions"><div class="qty-control"><button class="minus" type="button">-</button><span class="qty">1</span><button class="plus" type="button">+</button></div><button class="add-btn" type="button"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button></div>
+                                </div>
+                            </article>
+                            <article class="dish-card">
+                                <div class="dish-img">
+                                    <img src="images/pounded yam with fried chicken.jpeg" alt="pounded yam with fried chicken">
+                                    <button class="heart-btn" type="button" aria-label="Favorite Pounded Yam with Fried Chicken"><i class="fa-regular fa-heart"></i></button>
+                                </div>
+                                <div class="dish-info">
+                                    <h3>Pounded Yam with Fried Chicken</h3>
+                                    <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(100)</span></div>
+                                    <div class="price">₦20,500</div>
+                                    <div class="card-actions"><div class="qty-control"><button class="minus" type="button">-</button><span class="qty">1</span><button class="plus" type="button">+</button></div><button class="add-btn" type="button"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button></div>
+                                </div>
+                            </article>
+                            <article class="dish-card">
+                                <div class="dish-img">
+                                    <img src="images/white rice and beans.jpeg" alt="White rice and Beans">
+                                    <button class="heart-btn" type="button" aria-label="White Rice And Beans"><i class="fa-regular fa-heart"></i></button>
+                                </div>
+                                <div class="dish-info">
+                                    <h3>White Rice And Beans</h3>
+                                    <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(60)</span></div>
+                                    <div class="price">₦8,000</div>
+                                    <div class="card-actions"><div class="qty-control"><button class="minus" type="button">-</button><span class="qty">1</span><button class="plus" type="button">+</button></div><button class="add-btn" type="button"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button></div>
+                                </div>
+                            </article>
+                            <article class="dish-card">
+                                <div class="dish-img">
+                                    <img src="images/chicken(2).jpeg" alt="Chicken">
+                                    <button class="heart-btn" type="button" aria-label="Favorite Chicken"><i class="fa-regular fa-heart"></i></button>
+                                </div>
+                                <div class="dish-info">
+                                    <h3>Chicken</h3>
+                                    <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(90)</span></div>
+                                    <div class="price">₦12,000</div>
+                                    <div class="card-actions"><div class="qty-control"><button class="minus" type="button">-</button><span class="qty">1</span><button class="plus" type="button">+</button></div><button class="add-btn" type="button"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button></div>
+                                </div>
+                            </article>
+                            <article class="dish-card">
+                                <div class="dish-img">
+                                    <img src="images/jollof rice and meat .jpeg" alt="jollof rice  and meat">
+                                    <button class="heart-btn" type="button" aria-label="jollof rice and meat"><i class="fa-regular fa-heart"></i></button>
+                                </div>
+                                <div class="dish-info">
+                                    <h3>Jollof Rice and Meat</h3>
+                                    <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(70)</span></div>
+                                    <div class="price">₦15,000</div>
+                                    <div class="card-actions"><div class="qty-control"><button class="minus" type="button">-</button><span class="qty">1</span><button class="plus" type="button">+</button></div><button class="add-btn" type="button"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button></div>
+                                </div>
+                            </article>
+                            <article class="dish-card">
+                                <div class="dish-img">
+                                    <img src="images/fried rice and meat.jpeg" alt="fried rice and meat">
+                                    <button class="heart-btn" type="button" aria-label="Favorite fried rice and meat"><i class="fa-regular fa-heart"></i></button>
+                                </div>
+                                <div class="dish-info">
+                                    <h3>Fried Rice And Meat</h3>
+                                    <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(80)</span></div>
+                                    <div class="price">₦20,500</div>
+                                    <div class="card-actions"><div class="qty-control"><button class="minus" type="button">-</button><span class="qty">1</span><button class="plus" type="button">+</button></div><button class="add-btn" type="button"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button></div>
+                                </div>
+                            </article>
+         
+                            <article class="dish-card">
+                                <div class="dish-img">
+                                    <img src="images/spiced grilled fish.jpeg" alt="Spiced Grilled Fish">
+                                    <button class="heart-btn" type="button" aria-label="Favorite Spiced Grilled Fish"><i class="fa-regular fa-heart"></i></button>
+                                </div>
+                                <div class="dish-info">
+                                    <h3>Spiced Grilled Fish</h3>
+                                    <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(70)</span></div>
+                                    <div class="price">₦20,000</div>
+                                    <div class="card-actions"><div class="qty-control"><button class="minus" type="button">-</button><span class="qty">1</span><button class="plus" type="button">+</button></div><button class="add-btn" type="button"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button></div>
+                                </div>
+                            </article>
+
+                             <article class="dish-card">
+                                <div class="dish-img">
+                                    <img src="images/amala and assorted meat.jpeg" alt="Amala and Assorted Meat">
+                                    <button class="heart-btn" type="button" aria-label="Favorite Amala and Assorted Meat"><i class="fa-regular fa-heart"></i></button>
+                                </div>
+                                <div class="dish-info">
+                                    <h3>Amala and Assorted Meat</h3>
+                                    <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(110)</span></div>
+                                    <div class="price">₦17,000</div>
+                                    <div class="card-actions"><div class="qty-control"><button class="minus" type="button">-</button><span class="qty">1</span><button class="plus" type="button">+</button></div><button class="add-btn" type="button"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button></div>
+                                </div>
+                            </article>
+
+                             <article class="dish-card">
+                                <div class="dish-img">
+                                    <img src="images/grilled fish with pounded yam.jpeg" alt="Grilled Fish with Pounded Yam">
+                                    <button class="heart-btn" type="button" aria-label="Favorite Grilled Fish with Pounded Yam"><i class="fa-regular fa-heart"></i></button>
+                                </div>
+                                <div class="dish-info">
+                                    <h3>Grilled Fish with Pounded Yam</h3>
+                                    <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(55)</span></div>
+                                    <div class="price">₦17,000</div>
+                                    <div class="card-actions"><div class="qty-control"><button class="minus" type="button">-</button><span class="qty">1</span><button class="plus" type="button">+</button></div><button class="add-btn" type="button"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button></div>
+                                </div>
+                            </article>
+
+                             <article class="dish-card">
+                                <div class="dish-img">
+                                    <img src="images/shawarma.jpeg" alt="Shawarma">
+                                    <button class="heart-btn" type="button" aria-label="Favorite Shawarma"><i class="fa-regular fa-heart"></i></button>
+                                </div>
+                                <div class="dish-info">
+                                    <h3>Shawarma</h3>
+                                    <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(97)</span></div>
+                                    <div class="price">₦37,000</div>
+                                    <div class="card-actions"><div class="qty-control"><button class="minus" type="button">-</button><span class="qty">1</span><button class="plus" type="button">+</button></div><button class="add-btn" type="button"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button></div>
+                                </div>
+                            </article>
+
+                            <article class="dish-card">
+                                <div class="dish-img">
+                                    <img src="images/coke.jpeg" alt="Coke">
+                                    <button class="heart-btn" type="button" aria-label="Favorite Coke"><i class="fa-regular fa-heart"></i></button>
+                                </div>
+                                <div class="dish-info">
+                                    <h3>Coke</h3>
+                                    <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(85)</span></div>
+                                    <div class="price">₦10,000</div>
+                                    <div class="card-actions"><div class="qty-control"><button class="minus" type="button">-</button><span class="qty">1</span><button class="plus" type="button">+</button></div><button class="add-btn" type="button"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button></div>
+                                </div>
+                            </article>
+                            
+                        </div>
+                    </div>
+
+                    <aside class="cart-sidebar">
+                        <div class="cart-header"><span>Your Cart (0)</span><i class="fa-solid fa-trash" aria-label="Clear cart"></i></div>
+                        <div class="cart-items"></div>
+                        <div class="cart-summary">
+                            <div class="summary-row"><span>Subtotal</span><span>₦0</span></div>
+                            <div class="summary-row"><span>Delivery Fee</span><span>₦0</span></div>
+                            <div class="summary-row total"><span>Total</span><span>₦0</span></div>
+                            <button class="checkout-btn" type="button">Checkout <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
         qtySpan.textContent = Number(qtySpan.textContent) + qty;
       }
     } else {
-      // Create new cart item
+      // Create new cart item if not exists
       const cartItem = document.createElement("div");
       cartItem.className = "cart-item";
       cartItem.innerHTML = `
